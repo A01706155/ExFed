@@ -1,28 +1,29 @@
-#ifndef TwoDayPackage
-#define TwoDayPackage
+#ifndef TwoDayPackage_h
+#define TwoDayPackage_h
 
-#include "Package"
+#include "package.h"
 #include <string>
 
 // Clase derivada TwoDayPackage
 class TwoDayPackage : public Package {
   public:
-  TwoDayPackage(char rem[30], char dest[30], double kg, double cost, double tar)
+  TwoDayPackage(string rem, string dest, double kg, double costo, double tar);
   double getcalculateCost();
   
   protected:
   double tarifa;
 };
 
-TwoDayPackage::TwoDayPackage(char rem[30], char dest[30], double kg, double cost, double tar) {
-  remitente = rem
-  destinatario = dest
-  peso = kg
-  costo = cost
-  tarifa2d = tarifa
+TwoDayPackage::TwoDayPackage(string rem, string dest, double kg, double costo, double tar) {
+  remitente = rem;
+  destinatario = dest;
+  peso = kg;
+  costoporkg = costo;
+  tarifa = tar;
 }
 
 double TwoDayPackage::getcalculateCost() {
-  return Package::getcalculateCost() + tarifa2d;
+  return Package::getcalculateCost() + tarifa;
 }
 
+#endif

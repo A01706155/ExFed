@@ -1,5 +1,5 @@
-#ifndef Package
-#define Package
+#ifndef Package_h
+#define Package_h
 
 #include <string>
 
@@ -7,18 +7,17 @@ using namespace std;
 
 // Clase padre Package:
 class Package {  
-  public:
-   Package();
-   Package(string rem, string dest, double kg, double cost);
-    char getremitente();
-    char getdestinatario();
-    double getpeso();
-    double getcostoporkg();
-    double getcalculateCost();
+public:
+  Package();
+  Package(string rem, string dest, double kg, double costo);
+  string getremitente();
+  string getdestinatario();
+  double getpeso();
+  double getcalculateCost();
 
   protected:
-   char remitente[30];
-   char destinatario[30];
+   string remitente;
+   string destinatario;
    double peso;
    double costoporkg;
 };
@@ -27,30 +26,30 @@ Package::Package() {
   remitente = "noon";
   destinatario = "noon";
   peso = 0;
-  costo = 0;
+  costoporkg = 0;
 }
 
-Package::Package(char rem[30], char dest[30], double kg, double cost) {
+Package::Package(string rem, string dest, double kg, double costo) {
   remitente = rem;
   destinatario = dest;
   peso = kg;
-  costo = cost;
+  costoporkg = costo;
 }
 
-char Package:getremitente() {
+string Package::getremitente() {
   return remitente;
 }
 
-char Package::getdestinatario() {
+string Package::getdestinatario() {
   return destinatario;
 }
 
-double Package:getpeso() {
+double Package::getpeso() {
   return peso;
 }
 
-double Package::getcostoporkg() {
-  return peso*costo
+double Package::getcalculateCost() {
+  return peso*costoporkg;
 }
 
 #endif

@@ -1,27 +1,29 @@
-#ifndef OvernightPackage
-#define OvernightPackage
+#ifndef OvernightPackage_h
+#define OvernightPackage_h
 
-#include "Package"
+#include "package.h"
 #include <string>
 
 // Clase derivada OvernightPackage
 class OvernightPackage : public Package {
   public:
-  TwoDayPackage(char rem[30], char dest[30], double kg, double cost, double tarnoch)
+  OvernightPackage(string rem, string dest, double kg, double costo, double tarnoch);
   double getcalculateCost();
   
   protected:
   double tarifanoche;
 };
 
-OvernightPackage::OvernightPackage(char rem[30], char dest[30], double kg, double cost, double tarnoch) {
-  remitente = rem
-  destinatario = dest
-  peso = kg
-  costo = cost
-  tarifanoche = tarnoch
+OvernightPackage::OvernightPackage(string rem, string dest, double kg, double costo, double tarnoch) {
+  remitente = rem;
+  destinatario = dest;
+  peso = kg;
+  costoporkg = costo;
+  tarifanoche = tarnoch;
 }
 
 double OvernightPackage::getcalculateCost() {
-  return Package::getcalculateCost() + (peso * tarifanoche);
+  return Package::getcalculateCost();
 }
+
+#endif
