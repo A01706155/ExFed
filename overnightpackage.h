@@ -23,7 +23,7 @@ OvernightPackage::OvernightPackage(string rem, string dest, double kg, double co
 }
 
 double OvernightPackage::getcalculateCost() {
-  return Package::getcalculateCost();
+  return Package::getcalculateCost() + (peso * tarifanoche);
 }
 
 #endif

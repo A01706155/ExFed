@@ -8,8 +8,8 @@ using namespace std;
 int main(int argc, char* argv[]) {
   cout << "Bienvenido al bootleg de ExFed!" << "\n \n";
 	Package a("Lala", "Lolo", 1, 20);
-	TwoDayPackage b("Tangananica", "Tanganana", 5, 20, 50);
-	OvernightPackage c("Juan Carlos Bodoque", "Tulio Trivino", 1, 20, 20);
+	TwoDayPackage b("Tangananica", "Tanganana", 5, 20, 30);
+	OvernightPackage c("Juan Carlos Bodoque", "Tulio Trivino", 2, 20, 40);
 
 //Para envio normal
 	cout << "Envio estandar:" << endl;
