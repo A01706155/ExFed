@@ -1,14 +1,28 @@
 #include <iostream>
 #include "package.h"
+#include "twodaypackage.h"
+#include "overnightpackage.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
-	Package a;
-	TwoDayPackage b(10, 20);
-	OvernightPackage c(50);
+	Package a("Lala", "Lolo", 1, 20;
+	TwoDayPackage b("Tangananica", "Tanganana", 5, 20, 50);
+	OvernightPackage c("Juan Carlos", "Tulio Trivino", 1, 20, 20);
 
-	cout << "A type = " << a.getType() << " perimeter = " << a.getPerimeter() << " area = " << a.getArea() << "\n";
-	cout << "B type = " << b.getType() << " perimeter = " << b.getPerimeter() << " area = " << b.getArea() << "\n";
-	cout << "C type = " << c.getType() << " perimeter = " << c.getPerimeter() << " area = " << c.getArea() << "\n";
+//Para envio normal
+	cout << "Envio estandar:" << endl;
+  cout << "Remitente: " << a.getremitente() << endl; 
+  cout << "Destinatario: " << a.getdestinatario() << endl;
+  cout << "Peso: " << a.getpeso() << endl;
+  cout << "Costo: " << a.calculateCost() << endl;
+  
+	
+//Para envio en dos dias  
+
+	
+//Para envio en una noche
+
+return 0;
+
 }
